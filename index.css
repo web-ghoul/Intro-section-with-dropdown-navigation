@@ -1,0 +1,421 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    font-family: 'Epilogue', sans-serif;
+    overflow-x: hidden;
+}
+
+header .contain {
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+header .contain .left .logo {
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .contain .left .logo img {
+    width: 100%;
+}
+
+header .contain .right {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+}
+
+header .contain .right .tools {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+header .contain .right .tools .tool {
+    position: relative;
+}
+
+header .contain .right .tools .tool .link {
+    color: hsl(0, 0%, 41%);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in-out all .3s;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+header .contain .right .tools .tool:hover ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+header .contain .right .tools .tool .link:hover {
+    color: hsl(0, 0%, 8%);
+}
+
+header .contain .right .tools .tool .link img:last-child,
+header .contain .right .tools .tool .link:hover img:first-of-type {
+    display: none;
+}
+
+header .contain .right .tools .tool .link:hover img:last-child {
+    display: flex;
+}
+
+header .contain .right .tools .tool ul {
+    transition: ease-in-out all .3s;
+    gap: 20px;
+    display: grid;
+    opacity: 0;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    position: absolute;
+    top: 100%;
+    padding: 20px;
+    left: 50%;
+    width: fit-content;
+    transform: translateX(-50%);
+}
+
+header .contain .right .tools .tool ul li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+header .contain .right .btns {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+header .contain .right button {
+    font-size: 20px;
+    color: hsl(0, 0%, 41%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 10px 20px;
+    transition: ease-in-out all .3s;
+}
+
+header .contain .right button:hover {
+    color: hsl(0, 0%, 8%);
+}
+
+header .contain .right button:last-child {
+    border-radius: 20px;
+    border: 3px solid hsl(0, 0%, 41%);
+}
+
+header .contain .right button:last-child:hover {
+    border: 3px solid hsl(0, 0%, 8%);
+}
+
+section .contain {
+    padding: 40px 180px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+section .contain .content {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    align-self: stretch;
+}
+
+section .contain .info {
+    display: grid;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+section .contain .info h1 {
+    font-size: 80px;
+    color: hsl(0, 0%, 8%);
+}
+
+section .contain .info p {
+    color: hsl(0, 0%, 41%);
+    font-size: 22px;
+    line-height: 1.7;
+}
+
+section .contain .info button {
+    background-color: hsl(0, 0%, 8%);
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #fff;
+    border: 3px solid hsl(0, 0%, 8%);
+    transition: ease-in-out all .3s;
+    outline: none;
+    width: fit-content;
+}
+
+section .contain .info button:hover {
+    background-color: transparent;
+    cursor: pointer;
+    color: hsl(0, 0%, 8%);
+}
+
+section .contain .icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+section .contain>picture {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .contain>picture img {
+    width: 100%;
+}
+
+header .contain .list {
+    display: none;
+}
+
+header .contain .right .close {
+    display: none;
+}
+
+.toggle {
+    transform: translateX(0) !important;
+}
+
+.list {
+    display: grid !important;
+    opacity: 1 !important;
+}
+
+@media (max-width:992px) {
+    header .contain {
+        padding: 30px 50px;
+        gap: 30px;
+    }
+    header .contain .left .logo {
+        padding-top: 5px;
+    }
+    header .contain .right {
+        justify-content: stretch;
+        display: grid;
+        gap: 30px;
+        width: 50%;
+        position: absolute;
+        align-items: flex-start;
+        align-content: flex-start;
+        background-color: #fff;
+        height: 100%;
+        transition: ease-in-out all .3s;
+        top: 0;
+        right: 0;
+        transform: translateX(200%);
+        padding: 30px 50px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+    header .contain .right .close {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        cursor: pointer;
+    }
+    header .contain .right .tools {
+        display: grid;
+        justify-content: flex-start;
+        gap: 30px;
+    }
+    header .contain .right .tools .tool .link {
+        font-size: 20px;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+    header .contain .right .tools .tool ul {
+        gap: 18px;
+        opacity: 0;
+        display: none;
+        border-radius: 4px;
+        box-shadow: none;
+        position: relative;
+        top: auto;
+        padding: 18px;
+        left: auto;
+        transform: none;
+    }
+    header .contain .right .tools .tool ul li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+    header .contain .right .btns {
+        justify-content: stretch;
+        display: grid;
+        gap: 20px;
+    }
+    header .contain .right button {
+        font-size: 18px;
+        padding: 8px 16px;
+        width: 100%;
+    }
+    header .contain .right button:last-child {
+        border-radius: 18px;
+    }
+    section .contain {
+        padding: 30px 150px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 80px;
+    }
+    section .contain .content {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        align-self: stretch;
+    }
+    section .contain .info {
+        display: grid;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+    section .contain .info h1 {
+        font-size: 65px;
+    }
+    section .contain .info p {
+        font-size: 20px;
+    }
+    section .contain .info button {
+        border-radius: 12px;
+        padding: 10px 20px;
+        font-size: 20px;
+        border: 3px solid hsl(0, 0%, 8%);
+        transition: ease-in-out all .3s;
+        outline: none;
+        width: fit-content;
+    }
+    section .contain .info button:hover {
+        background-color: transparent;
+        cursor: pointer;
+    }
+    section .contain .icons {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 30px;
+    }
+    section .contain picture {
+        order: -1;
+    }
+    header .contain .list {
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        align-items: center;
+    }
+    header .contain .list img {
+        width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+    header .contain {
+        padding: 20px 40px;
+        gap: 20px;
+    }
+    header .contain .right {
+        gap: 20px;
+        width: 70%;
+        padding: 20px 40px;
+    }
+    header .contain .right .tools {
+        gap: 20px;
+    }
+    header .contain .right .tools .tool .link {
+        font-size: 18px;
+    }
+    header .contain .right .tools .tool ul {
+        gap: 16px;
+        border-radius: 3px;
+        padding: 16px;
+    }
+    header .contain .right button {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+    header .contain .right button:last-child {
+        border-radius: 12px;
+    }
+    section .contain {
+        padding: 30px 100px;
+        gap: 50px;
+    }
+    section .contain .content {
+        gap: 40px;
+    }
+    section .contain .info {
+        gap: 40px;
+    }
+    section .contain .info h1 {
+        text-align: center;
+        font-size: 50px;
+    }
+    section .contain .info p {
+        font-size: 18px;
+        text-align: center;
+    }
+    section .contain .info button {
+        border-radius: 8px;
+        padding: 8px 15px;
+        font-size: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+    }
+    section .contain .icons {
+        justify-content: center;
+        flex-wrap: wrap;
+        display: flex;
+        gap: 20px;
+    }
+}
